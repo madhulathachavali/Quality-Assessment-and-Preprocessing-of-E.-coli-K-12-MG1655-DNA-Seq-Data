@@ -18,3 +18,8 @@ PE: Indicates paired-end data.
 - 10: Simple clip threshold.
 SLIDINGWINDOW:4:20: Trims reads with an average quality below 20 in a sliding window of 4 bases.
 MINLEN:36: Removes reads shorter than 36 bases after trimming.
+
+Alignment Summary
+Reads Processed: 82,458 reads.
+CPU Time: 378.175 seconds.
+Real Time: 668.257 seconds.
