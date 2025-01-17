@@ -23,3 +23,16 @@ Alignment Summary
 Reads Processed: 82,458 reads.
 CPU Time: 378.175 seconds.
 Real Time: 668.257 seconds.
+
+Alignment Summary
+Key Metrics
+- Total Reads: 9,675,593
+- Mapped Reads: 9,051,992 (93.55%)
+- Properly Paired Reads: 8,901,678 (92.12%)
+- Singletons: 36,187 (0.37%)
+- Supplementary Alignments: 12,497 (e.g., chimeric reads)
+- Reads with Mate Mapped to Different Chromosomes: 0
+- High Mapping Efficiency:
+Over 93.5% of reads aligned to the reference genome, reflecting good data quality and library preparation.
+- Low Singletons:
+Only 0.37% of reads had mates that failed to align, indicating high pairing accuracy.
