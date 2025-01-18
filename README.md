@@ -36,3 +36,9 @@ Key Metrics
 Over 93.5% of reads aligned to the reference genome, reflecting good data quality and library preparation.
 - Low Singletons:
 Only 0.37% of reads had mates that failed to align, indicating high pairing accuracy.
+
+Key Components
+- Summary statistics of variants.
+- Functional impacts of mutations.
+- Phylogenetic or comparative insights.
+- Annotated .vcf or highlighted variants of interest.
