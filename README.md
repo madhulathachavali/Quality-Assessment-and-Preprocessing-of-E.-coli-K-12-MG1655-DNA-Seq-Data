@@ -1,5 +1,7 @@
 # Quality-Assessment-and-Preprocessing-of-E.-coli-K-12-MG1655-DNA-Seq-Data
 
+
+
 ```bash
 trimmomatic PE -threads 4 \
   SRR13921545_1.fastq SRR13921545_2.fastq \
