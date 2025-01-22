@@ -40,3 +40,45 @@ Over 93.5% of reads aligned to the reference genome, reflecting good data qualit
 Only 0.37% of reads had mates that failed to align, indicating high pairing accuracy.
 
 
+
+Create a new file named fastqc_pipeline.nf in your Ecoli directory:
+bash
+cd /Users/madhuchavali/Desktop/Ecoli
+touch fastqc_pipeline.nf
+Open fastqc_pipeline.nf and write:
+text
+process FASTQC {
+    publishDir "/Users/madhuchavali/Desktop/Ecoli/FastQC_output", mode: 'copy'
+
+    input:
+    tuple val(sample_id), path(reads)
+
+    output:
+    path "fastqc_${sample_id}_logs"
+
+    script:
+    """
+    mkdir fastqc_${sample_id}_logs
+    fastqc -o fastqc_${sample_id}_logs -f fastq -q ${reads}
+    """
+}
+
+workflow {
+    read_pairs_ch = Channel.fromFilePairs("/Users/madhuchavali/Desktop/Ecoli/FastQ/*_{1,2}.fastq.gz")
+    FASTQC(read_pairs_ch)
+}
+Save the file and exit the text editor.
+Install Nextflow:
+bash
+curl -s https://get.nextflow.io | bash
+Make the Nextflow script executable:
+bash
+chmod +x nextflow
+Run the Nextflow pipeline:
+bash
+./nextflow run fastqc_pipeline.nf
+
+
+
+
+
